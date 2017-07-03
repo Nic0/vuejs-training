@@ -7,8 +7,12 @@
 <body>
 
     <div id="root">
-        <input type="text" id="input" v-model="message">
-        <p>il a dit {{ message }}</p>
+
+        <ul>
+            <li v-for="name in names" v-text="name"></li>
+        </ul>
+        <input type="text" id="input" v-model="input_name">
+        <button id="button" @click="addName">add name</button>
     </div>
 
 </body>

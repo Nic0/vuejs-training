@@ -1,8 +1,19 @@
 import Vue from 'vue'
 
-new Vue({
+var app = new Vue({
+
     el: '#root',
+
     data: {
-        message: "Hello World"
+        input_name: '',
+        names: ['NIP', 'CHP', 'PAM', 'WIL']
+    },
+
+    methods: {
+
+        addName() {
+            this.names.push(this.input_name);
+            this.input_name = '';
+        }
     }
 });
